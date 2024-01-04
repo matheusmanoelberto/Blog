@@ -1,5 +1,6 @@
 ﻿using Blog.Data;
 using Blog.Models;
+using Blog.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -28,14 +29,20 @@ public class CategoryController : ControllerBase
     }
 
     [HttpPost("v1/categories")]
-    public async Task<IActionResult> PostAsync([FromBody] Category model, [FromServices] BlogDataContext context)
+    public async Task<IActionResult> PostAsync([FromBody] EditorCategoryViewModel model, [FromServices] BlogDataContext context)
     {
         try
         {
-            await context.Categories.AddAsync(model);
+            var category = new Category
+            {
+                Id = 0,
+                Name = model.Name,
+                Slug = model.Slug.ToLower(),
+            };
+            await context.Categories.AddAsync(category);
             await context.SaveChangesAsync();
 
-            return Created($"v1/categories/{model.Id}", model);
+            return Created($"v1/categories/{category.Id}", category);
         }
         catch (DbUpdateConcurrencyException ex)
         {
@@ -48,18 +55,17 @@ public class CategoryController : ControllerBase
     }
 
     [HttpPut("v1/categories/{id:int}")]
-    public async Task<IActionResult> PutAsync([FromBody] Category model, [FromRoute] int id, [FromServices] BlogDataContext context)
+    public async Task<IActionResult> PutAsync([FromBody] EditorCategoryViewModel model, [FromRoute] int id, [FromServices] BlogDataContext context)
     {
         try
         {
             var category = await context.Categories.FirstOrDefaultAsync(x => x.Id == id);
-            return Ok(category);
 
             if (category == null)
                 return NotFound();
 
-            category.Name = category.Name;
-            category.Slug = category.Slug;
+            category.Name = model.Name;
+            category.Slug = model.Slug;
 
             context.Categories.Update(category);
             await context.SaveChangesAsync();
@@ -83,7 +89,6 @@ public class CategoryController : ControllerBase
         try
         {
             var category = await context.Categories.FirstOrDefaultAsync(x => x.Id == id);
-            return Ok(category);
 
             if (category == null)
                 return NotFound();
