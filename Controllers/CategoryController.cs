@@ -12,25 +12,41 @@ public class CategoryController : ControllerBase
     [HttpGet ("v1/categories")]
     public async Task<IActionResult> GetAsync([FromServices]BlogDataContext context)
     {
-        var categories = await context.Categories.ToListAsync();
-        return Ok(categories);
+        try
+        {
+            var categories = await context.Categories.ToListAsync();
+            return Ok(new ResultViewModel<List<Category>>(categories));
+        }
+        catch 
+        {
+            return StatusCode(500, new ResultViewModel<List<Category>>("050X04 - Falha interna no servidor"));         
+        }
     }
 
     [HttpGet("v1/categories/{id:int}")]
     public async Task<IActionResult> GetByIdAsync([FromRoute] int id ,[FromServices] BlogDataContext context)
     {
-        var category = await context.Categories.FirstOrDefaultAsync(x => x.Id == id);
-        return Ok(category);
+        try
+        {
+            var category = await context.Categories.FirstOrDefaultAsync(x => x.Id == id);
 
-        if (category == null)
-            return NotFound();
+            if (category == null)
+                return NotFound(new ResultViewModel<Category>("Conteúdo não encontrado"));
 
-        return Ok(category);        
+            return Ok(new ResultViewModel<Category>(category));
+        }
+        catch
+        {
+            return StatusCode(500, new ResultViewModel<List<Category>>("050X05 - Falha interna no servidor"));
+        }      
     }
 
     [HttpPost("v1/categories")]
     public async Task<IActionResult> PostAsync([FromBody] EditorCategoryViewModel model, [FromServices] BlogDataContext context)
     {
+        if (!ModelState.IsValid)        
+            return BadRequest();
+        
         try
         {
             var category = new Category
