@@ -6,6 +6,7 @@ C:\Users\MATEUS\Documents\GitHub\Blog\bin\Debug\net7.0\Blog.runtimeconfig.json
 C:\Users\MATEUS\Documents\GitHub\Blog\bin\Debug\net7.0\Blog.dll
 C:\Users\MATEUS\Documents\GitHub\Blog\bin\Debug\net7.0\Blog.pdb
 C:\Users\MATEUS\Documents\GitHub\Blog\bin\Debug\net7.0\Humanizer.dll
+C:\Users\MATEUS\Documents\GitHub\Blog\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\MATEUS\Documents\GitHub\Blog\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
 C:\Users\MATEUS\Documents\GitHub\Blog\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\MATEUS\Documents\GitHub\Blog\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
@@ -58,4 +59,3 @@ C:\Users\MATEUS\Documents\GitHub\Blog\obj\Debug\net7.0\refint\Blog.dll
 C:\Users\MATEUS\Documents\GitHub\Blog\obj\Debug\net7.0\Blog.pdb
 C:\Users\MATEUS\Documents\GitHub\Blog\obj\Debug\net7.0\Blog.genruntimeconfig.cache
 C:\Users\MATEUS\Documents\GitHub\Blog\obj\Debug\net7.0\ref\Blog.dll
-C:\Users\MATEUS\Documents\GitHub\Blog\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
