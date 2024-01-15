@@ -12,18 +12,17 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Blog.Migrations
 {
     [DbContext(typeof(BlogDataContext))]
-    [Migration("20240102002506_CreateDatabase")]
+    [Migration("20240114222108_CreateDatabase")]
     partial class CreateDatabase
     {
-        /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.0")
+                .HasAnnotation("ProductVersion", "6.0.0")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
-            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
             modelBuilder.Entity("Blog.Models.Category", b =>
                 {
@@ -31,18 +30,18 @@ namespace Blog.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(80)
-                        .HasColumnType("NVARCHAR")
+                        .HasColumnType("NVARCHAR(80)")
                         .HasColumnName("Name");
 
                     b.Property<string>("Slug")
                         .IsRequired()
                         .HasMaxLength(80)
-                        .HasColumnType("VARCHAR")
+                        .HasColumnType("VARCHAR(80)")
                         .HasColumnName("Slug");
 
                     b.HasKey("Id");
@@ -59,7 +58,7 @@ namespace Blog.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<int>("AuthorId")
                         .HasColumnType("int");
@@ -111,7 +110,7 @@ namespace Blog.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -132,7 +131,7 @@ namespace Blog.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -153,7 +152,7 @@ namespace Blog.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("Bio")
                         .IsRequired()
@@ -170,7 +169,7 @@ namespace Blog.Migrations
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(80)
-                        .HasColumnType("NVARCHAR")
+                        .HasColumnType("NVARCHAR(80)")
                         .HasColumnName("Name");
 
                     b.Property<string>("PasswordHash")
@@ -180,7 +179,7 @@ namespace Blog.Migrations
                     b.Property<string>("Slug")
                         .IsRequired()
                         .HasMaxLength(80)
-                        .HasColumnType("VARCHAR")
+                        .HasColumnType("VARCHAR(80)")
                         .HasColumnName("Slug");
 
                     b.HasKey("Id");

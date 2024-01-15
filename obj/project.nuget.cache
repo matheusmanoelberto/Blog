@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "XNRI2LeZ3brqvU8wXTFga4j/GE3zZOG7X/l0PAYCBZxzVPKRHbliubXOdwlsCdotnUOgCNZ91ynCAlWzY39v5w==",
+  "dgSpecHash": "P7d77I1Z5LZQY6H4QTRSVLFxNr6qip4SusG6jlbeZCzqY5+5TKRt/xCCh856izxo4U37dZ7KyZwH+GEvukiswQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\MATEUS\\Documents\\GitHub\\Blog\\Blog.csproj",
   "expectedPackageFiles": [
@@ -51,6 +51,7 @@
     "C:\\Users\\MATEUS\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\MATEUS\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\MATEUS\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\MATEUS\\.nuget\\packages\\secureidentity\\1.0.4\\secureidentity.1.0.4.nupkg.sha512",
     "C:\\Users\\MATEUS\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\MATEUS\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\MATEUS\\.nuget\\packages\\system.configuration.configurationmanager\\4.7.0\\system.configuration.configurationmanager.4.7.0.nupkg.sha512",

@@ -12,7 +12,8 @@
           "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.0",
           "Microsoft.EntityFrameworkCore": "6.0.0",
           "Microsoft.EntityFrameworkCore.Design": "6.0.0",
-          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.0"
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.0",
+          "SecureIdentity": "1.0.4"
         },
         "runtime": {
           "Blog.dll": {}
@@ -406,6 +407,14 @@
             "assetType": "runtime",
             "assemblyVersion": "4.0.2.0",
             "fileVersion": "4.700.19.56404"
+          }
+        }
+      },
+      "SecureIdentity/1.0.4": {
+        "runtime": {
+          "lib/net6.0/SecureIdentity.dll": {
+            "assemblyVersion": "1.0.4.0",
+            "fileVersion": "1.0.4.0"
           }
         }
       },
@@ -898,6 +907,13 @@
       "sha512": "sha512-mtVirZr++rq+XCDITMUdnETD59XoeMxSpLRIII7JRI6Yj0LEDiO1pPn0ktlnIj12Ix8bfvQqQDMMIF9wC98oCA==",
       "path": "microsoft.win32.systemevents/4.7.0",
       "hashPath": "microsoft.win32.systemevents.4.7.0.nupkg.sha512"
+    },
+    "SecureIdentity/1.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/s0TMYeHuLXFh2nI337IFGL2E3FJU+o20W4e52muxbWl5BPefUlmEPBTwWuCq3NczwWhbes5GDC6kDWYBrhLaQ==",
+      "path": "secureidentity/1.0.4",
+      "hashPath": "secureidentity.1.0.4.nupkg.sha512"
     },
     "System.Buffers/4.5.0": {
       "type": "package",
