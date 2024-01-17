@@ -20,6 +20,7 @@ C:\Users\MATEUS\Documents\GitHub\Blog\bin\Debug\net7.0\Microsoft.IdentityModel.P
 C:\Users\MATEUS\Documents\GitHub\Blog\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\MATEUS\Documents\GitHub\Blog\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\MATEUS\Documents\GitHub\Blog\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\MATEUS\Documents\GitHub\Blog\bin\Debug\net7.0\SecureIdentity.dll
 C:\Users\MATEUS\Documents\GitHub\Blog\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
 C:\Users\MATEUS\Documents\GitHub\Blog\bin\Debug\net7.0\System.Drawing.Common.dll
 C:\Users\MATEUS\Documents\GitHub\Blog\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
@@ -59,4 +60,3 @@ C:\Users\MATEUS\Documents\GitHub\Blog\obj\Debug\net7.0\refint\Blog.dll
 C:\Users\MATEUS\Documents\GitHub\Blog\obj\Debug\net7.0\Blog.pdb
 C:\Users\MATEUS\Documents\GitHub\Blog\obj\Debug\net7.0\Blog.genruntimeconfig.cache
 C:\Users\MATEUS\Documents\GitHub\Blog\obj\Debug\net7.0\ref\Blog.dll
-C:\Users\MATEUS\Documents\GitHub\Blog\bin\Debug\net7.0\SecureIdentity.dll

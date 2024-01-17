@@ -38,6 +38,7 @@ public class AccountController : ControllerBase
                 user = user.Email, password
             }));
         }
+
         catch (DbUpdateException) 
         {
             return StatusCode(400, new ResultViewModel<string>("05X99 - Este E-mail já está cadastrado"));
@@ -46,9 +47,6 @@ public class AccountController : ControllerBase
         {
             return StatusCode(500, new ResultViewModel<string>("05X04 - Falha interna no servidor"));
         }
-
-
-        return Ok();
     }
 
     [HttpPost("v1/accounts/login")]
