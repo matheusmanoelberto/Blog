@@ -3,6 +3,7 @@ using Blog.Extensions;
 using Blog.Models;
 using Blog.Services;
 using Blog.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SecureIdentity.Password;
@@ -13,16 +14,16 @@ namespace Blog.Controllers;
 public class AccountController : ControllerBase
 {
     [HttpPost("v1/accounts/")]
-    public async Task<IActionResult> Post([FromBody]RegisterViewModels model, [FromServices]BlogDataContext context)
+    public async Task<IActionResult> Post([FromBody] RegisterViewModel model, [FromServices] BlogDataContext context)
     {
-        if(!ModelState.IsValid)
+        if (!ModelState.IsValid)
             return BadRequest(new ResultViewModel<string>(ModelState.GetErrors()));
 
-        var user = new User 
-        { 
+        var user = new User
+        {
             Name = model.Name,
             Email = model.Email,
-            Slug = model.Email.Replace("@","-").Replace(".","-")
+            Slug = model.Email.Replace("@", "-").Replace(".", "-")
         };
 
         var password = PasswordGenerator.Generate(25);
@@ -39,7 +40,7 @@ public class AccountController : ControllerBase
             }));
         }
 
-        catch (DbUpdateException) 
+        catch (DbUpdateException)
         {
             return StatusCode(400, new ResultViewModel<string>("05X99 - Este E-mail já está cadastrado"));
         }
@@ -57,5 +58,8 @@ public class AccountController : ControllerBase
         return Ok(token);
     }
 
-    
+    [Authorize(Roles = "user")]
+    [HttpGet("v1/user")]
+    public IActionResult GetUser() => Ok(User.Identity.Name);
+
 }

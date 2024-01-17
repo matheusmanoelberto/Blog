@@ -13,7 +13,7 @@
           "Microsoft.EntityFrameworkCore": "6.0.0",
           "Microsoft.EntityFrameworkCore.Design": "6.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.0",
-          "SecureIdentity": "1.0.2"
+          "SecureIdentity": "1.0.4"
         },
         "runtime": {
           "Blog.dll": {}
@@ -410,11 +410,11 @@
           }
         }
       },
-      "SecureIdentity/1.0.2": {
+      "SecureIdentity/1.0.4": {
         "runtime": {
-          "lib/net5.0/SecureIdentity.dll": {
-            "assemblyVersion": "1.0.2.0",
-            "fileVersion": "1.0.2.0"
+          "lib/net6.0/SecureIdentity.dll": {
+            "assemblyVersion": "1.0.4.0",
+            "fileVersion": "1.0.4.0"
           }
         }
       },
@@ -908,12 +908,12 @@
       "path": "microsoft.win32.systemevents/4.7.0",
       "hashPath": "microsoft.win32.systemevents.4.7.0.nupkg.sha512"
     },
-    "SecureIdentity/1.0.2": {
+    "SecureIdentity/1.0.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-N1ewyG8lrgVmN5V9y6W6yGWBCPsNgW7WXxz564RbvTQ+igluN7Eu4dxYksxFTCjh1CcEf5wWJQxyDtbYyNTd5A==",
-      "path": "secureidentity/1.0.2",
-      "hashPath": "secureidentity.1.0.2.nupkg.sha512"
+      "sha512": "sha512-/s0TMYeHuLXFh2nI337IFGL2E3FJU+o20W4e52muxbWl5BPefUlmEPBTwWuCq3NczwWhbes5GDC6kDWYBrhLaQ==",
+      "path": "secureidentity/1.0.4",
+      "hashPath": "secureidentity.1.0.4.nupkg.sha512"
     },
     "System.Buffers/4.5.0": {
       "type": "package",
