@@ -8,17 +8,17 @@ public class ApiKeyAttribute : Attribute, IAsyncActionFilter
 {
     public async Task OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
     {
-       if (!context.HttpContext.Request.Query.TryGetValue(Configuration.apiKeyname, out var extractedApiKey))
+       if (!context.HttpContext.Request.Query.TryGetValue(Configuration.ApiKeyName, out var extractedApiKey))
        {
             context.Result = new ContentResult()
             {
                 StatusCode = 401,
-                Content = "ApiKey n~ao encontrada"
+                Content = "ApiKey não encontrada"
             };
             return;
        }
 
-       if(!Configuration.apiKey.Equals(extractedApiKey))
+       if(!Configuration.ApiKey.Equals(extractedApiKey))
         {
             context.Result = new ContentResult()
             {

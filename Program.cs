@@ -21,8 +21,8 @@ app.Run();
 void LoadConfiguration(WebApplication app)
 {
     Configuration.JwtKey = app.Configuration.GetValue<string>("JwtKey");
-    Configuration.apiKeyName = app.Configuration.GetValue<string>("ApiKeyName");
-    Configuration.apiKey = app.Configuration.GetValue<string>("ApiKey");
+    Configuration.ApiKeyName = app.Configuration.GetValue<string>("ApiKeyName");
+    Configuration.ApiKey = app.Configuration.GetValue<string>("ApiKey");
 
     var smtp = new Configuration.SmtpConfiguration();
     app.Configuration.GetSection("Smtp").Bind(smtp);
