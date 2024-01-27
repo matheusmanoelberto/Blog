@@ -1,11 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Blog.ViewModels;
+namespace Blog.ViewModels.Accounts;
 
 public class LoginViewModel
 {
     [Required(ErrorMessage = "O E-mail é Obrigatório")]
-    [EmailAddress(ErrorMessage ="O E-mail é Inválido")]
+    [EmailAddress(ErrorMessage = "O E-mail é Inválido")]
     public string Email { get; set; }
 
 
