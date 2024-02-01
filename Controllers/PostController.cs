@@ -10,6 +10,14 @@ public class PostController : ControllerBase
     [HttpGet("v1/posts")]
     public async Task<IActionResult> GetAsync([FromServices] BlogDataContext context)
     {
-        return Ok(await context.Posts.ToListAsync());
+        var posts = await context
+            .Posts
+            .AsNoTracking()
+            .Select(x => new
+            {
+
+            })
+            .ToListAsync();
+        return Ok(posts);
     }
 }
